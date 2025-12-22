@@ -1,19 +1,46 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
 
-<h1 style="color:rgb(113, 88, 255);">Meen skin Green</h2>
-<p>HTML images are defined with the img tag, and the filename of the image source is specified in the src attribute:</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #register {
+        font-size: 24px;
+        color: rgb(33, 112, 124);
+        font-weight: 800;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(248, 156, 156);
+        border: 1px solid black;
+        padding-left: 10px;
+    }
+    @font-face {
+        font-family: 'Kanit';
+        src: url('fonts/Kanit-Regular.ttf') format('truetype');
+    }
+    body {
+        font-family: 'Kanit',sans-serif;
+    }
+</style>
+    <!-- ส่วนนี้แสดงออกหน้าจอ-->
+    <!-- form -->
+     <div id="register">Register Form</div>
+    ชื่อ <input class="form" type ="text">
+    นามสกุล <input class="form" type ="text"> <br>
+    อายุ <input class="form" type ="number" min="0" max="150"> <br>
+    เพศ <input type ="radio" name="gender" value="male"> ชาย
+        <input type ="radio" name="gender" value="female"> หญิง
+    งานอดิเรก <br>
+    <input type ="checkbox" name="hobby" value="reading"> อ่านหนังสือ <br>
+    <input type ="checkbox" name="hobby" value="traveling"> ท่องเที่ยว <br>
+    <input type ="checkbox" name="hobby" value="sports"> เล่นฟีฬา <br>
 
-<img src="https://tse2.mm.bing.net/th/id/OIP.w6Fy1bO4SE3b1FikFqek7gDPEs?cb=ucfimg2&ucfimg=1&w=400&h=578&rs=1&pid=ImgDetMain&o=7&rm=3" width="500" height="600">
-
-<p style="color:red;">This is a red paragraph.</p>
-<body style="background-color:rgb(0, 0, 0);">
-
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
+    อธิบายตัวเอง <br>
+    <textarea rows="4" cols="50"></textarea> <br>
+    <input type="submit" value="Submit">
 </body>
-
-</body>
-</html>
+</html> 
