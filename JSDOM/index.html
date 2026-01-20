@@ -31,4 +31,12 @@ function showHobby() {
 function changeGender() {
     let genderInputs = document.querySelectorAll('input[name="gender"]');
     for (let i = 0; i < genderInputs.length; i++) {
-        if (gender
+        if (genderInputs[i].checked) {
+            console.log(genderInputs[i].value);
+        }
+    }
+}
+</script>
+
+</body>
+</html>
