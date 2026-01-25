@@ -5,42 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM and Events</title>
 </head>
+
 <body>
 
-<h3>งานอดิเรก</h3>
-<input type="checkbox" name="hobby" value="reading"> Reading
-<input type="checkbox" name="hobby" value="traveling"> Traveling
-<input type="checkbox" name="hobby" value="gaming"> Gaming
-<br><br>
-<button onclick="showHobby()">แสดงงานอดิเรก</button>
+    <h3>งานอดิเรก</h3>
+    <input type="checkbox" name="hobby" value="reading"> Reading
+    <input type="checkbox" name="hobby" value="traveling"> Traveling
+    <input type="checkbox" name="hobby" value="gaming"> Gaming
+    <br><br>
+    <button onclick="showHobby()">แสดงงานอดิเรก</button>
 
-<h3>เพศ</h3>
-<input type="radio" name="gender" value="male" checked onchange="changeGender()"> Male
-<input type="radio" name="gender" value="female" onchange="changeGender()"> Female
+    <h3>เพศ</h3>
+    <input type="radio" name="gender" value="male" checked onchange="changeGender()"> Male
+    <input type="radio" name="gender" value="female" onchange="changeGender()"> Female
 
-<script>
-function showHobby() {
-    let checkboxInputs = document.querySelectorAll('input[name="hobby"]');
-    for (let i = 0; i < checkboxInputs.length; i++) {
-        if (checkboxInputs[i].checked) {
-            console.log(checkboxInputs[i].value);
-        }
-    }
-}
-
-function changeGender() {
-    let genderInputs = document.querySelectorAll('input[name="gender"]');
-    for (let i = 0; i < genderInputs.length; i++) {
-        if (genderInputs[i].checked) {
-            console.log(genderInputs[i].value);
-        }
-    }
-}
-</script>
-
-ชื่อ: <input type="text" name="fname" onkeydone="changeFname()"/>
     <script>
-        //onkeydown กดปุ่มคีย์บอร์ด
+    function showHobby() {
+        let checkboxInputs = document.querySelectorAll('input[name="hobby"]');
+        for (let i = 0; i < checkboxInputs.length; i++) {
+            if (checkboxInputs[i].checked) {
+                console.log(checkboxInputs[i].value);
+            }
+        }
+    }
+
+    function changeGender() {
+        let genderInputs = document.querySelectorAll('input[name="gender"]');
+        for (let i = 0; i < genderInputs.length; i++) {
+            if (genderInputs[i].checked) {
+                console.log(genderInputs[i].value);
+            }
+        }
+    }
+    </script>
+
+
+ชื่อ: <input type="text" name="fname" onkeydown="changeFname()"/>
+    <script>
+        //onkeydown event
         function changeFname() {
             console.log("Key down event detected");
             //เลือก input element
@@ -50,11 +52,11 @@ function changeGender() {
         }
     </script>
 
-<body>
-<div
+
+<div 
 onmouseover="OverItem()"
 onmouseup="UpItem()"
-onmousedown="DownItem()">Cick</div>
+onmousedown="DownItem()"> Cick</div>
     <script>
         function OverItem() {
             console.log("Mouse over detected");
@@ -66,21 +68,17 @@ onmousedown="DownItem()">Cick</div>
             console.log("Mouse down detected");
         }
     </script>
-</body>
 
-<body>
-<div id="hi">Hi <span style="display: none;">A</span></div>
-    <script>
+
+<div id="hi"></div>
+    <script >
         let hiDom = document.getElementById("hi");
-        hiDom.innerHTML = "Hi<b>B</b>";
+        // ไม่แสดงอะไรบนหน้าเว็บ
 
-        console.log(hiDom.textContent);
-        console.log(hiDom.innerText);
-        console.log(hiDom.innerHTML);
+        console.log("Hi B");   // แสดงทั้ง Hi และ B ใน console เท่านั้น
     </script>
-</body>
 
-<body>
+
     <h1>งานอดิเรก</h1>
     <div id="content"></div>
 
@@ -90,10 +88,10 @@ onmousedown="DownItem()">Cick</div>
         <li>เล่นเกม</li>
     </ul>
 
-<input type="checkbox" name="hobby" value="reading"> อ่านหนังสือ
-<input type="checkbox" name="hobby" value="swimming"> ว่ายน้ำ
-<input type="checkbox" name="hobby" value="gaming"> เล่นเกม
-<button onclick="submitHobby()">Submit</button>
+    <input type="checkbox" name="hobby" value="reading"> อ่านหนังสือ
+    <input type="checkbox" name="hobby" value="swimming"> ว่ายน้ำ
+    <input type="checkbox" name="hobby" value="gaming"> เล่นเกม
+    <button onclick="submitHobby()">Submit</button>
 
     <script>
         function submitHobby(){
@@ -112,9 +110,8 @@ onmousedown="DownItem()">Cick</div>
             //ใส่ html ลงใน div id content
             let contentDiv = document.getElementById('content');
             contentDiv.innerHTML = contentHTML;
-        }
-        </script>
-</body>
+            }
+    </script>
 
 </body>
 </html>
