@@ -165,6 +165,25 @@ textarea {
     justify-content: center;
     margin-top: 30px;
 }
+.message {
+    background-color: #2d3436;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.message.success {
+    background-color: #45ff64;
+    color:#eee;
+    display: block;
+}
+
+.message.danger {
+    background-color: #ea6666;
+    color: #eee;
+    display: block;
+}
 
 .button {
     font-family: 'Mali', cursive;
