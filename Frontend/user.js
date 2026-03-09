@@ -25,7 +25,6 @@ window.onload = async () => {
             const id = event.target.dataset.id;
             try {
                 await axios.delete(`${BASE_URL}/users/${id}`);
-                // เพิ่มการโหลดหน้าใหม่เพื่อให้ข้อมูลที่ถูกลบหายไปจากหน้าจอ
                 window.location.reload(); 
             } catch (error) {
                 console.error("Error deleting user:", error);
