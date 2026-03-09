@@ -9,7 +9,6 @@ window.onload = async () => {
     
     for (let i = 0; i < response.data.length; i++) {
         let user = response.data[i];
-        // แก้ไขเป็น firstName และ lastName (N ตัวใหญ่) ให้ตรงกับที่แสดงใน Console
         htmlData += `<div>
             ${user.firstName} ${user.lastName}
             <button>Edit</button>
